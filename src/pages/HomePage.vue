@@ -3,10 +3,11 @@
     <headerComponent />
 
     <!-- SECTION ONE -->
-    <div class="container flex flex-col items-center mt-10">
-        <img src="../assets/hero-sm.png" alt="">
+    <div class=" flex flex-col items-center mt-10 md:flex-row-reverse md:justify-between md:p-10 md:pl-40">
+        <img class="md:hidden" src="../assets/hero-sm.png" alt="">
+        <img class="hidden md:block md:w-1/2 md:h-auto" src="../assets/hero-md.png" alt="">
         <div class="text-left ml-5">
-            <h1 class="text-h2 text-primary font-roboto mt-20">Jij wilt koken! Wat nu?</h1>
+            <h1 class="text-h2 text-primary font-roboto mt-20">Jij wilt koken!<br class="hidden md:block"> Wat nu?</h1>
             <p class="text-gray mt-5">Kijk nu bij onze cursussen en recepten!</p>
             <CustomRouterLink to="/course-overview">
                 <button class="mt-20 bg-secondary text-LABEL text-white p-4 rounded-md">
@@ -18,13 +19,14 @@
 
     <!-- SECTION TWO -->
     <div>
-        <div class="bg-accent mt-10 flex flex-col items-center">
-            <h3 class="text-h3 mt-10">Laatste cursussen</h3>
+        <h3 class="bg-accent text-h3 pt-10 mt-10 text-center md:text-left md:p-10 md:pl-40">Laatste cursussen</h3>
+        <div class="bg-accent flex flex-col items-center md:flex-row md:justify-around md:pt-10">
 
             <!-- Course -->
             <CustomRouterLink to="/course/:courseId">
                 <div class="relative">
-                    <img class="mt-10" src="../assets/wok.png" alt="">
+                    <img class="mt-10 md:hidden" src="../assets/wok.png" alt="">
+                    <img class="hidden md:block" src="../assets/wokken-md.png" alt="">
                     <div class="absolute bottom-10 left-10">
                         <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
                             <p class="text-text text-gray">Kees</p>
@@ -37,7 +39,8 @@
             <!-- Course -->
             <CustomRouterLink to="/course/:courseId">
                 <div class="relative">
-                    <img class="mt-10" src="../assets/salade.png" alt="">
+                    <img class="mt-10 md:hidden" src="../assets/salade.png" alt="">
+                    <img class="hidden md:block" src="../assets/salade-md.png" alt="">
                     <div class="absolute bottom-10 left-10">
                         <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
                             <p class="text-text text-gray">Petra</p>
@@ -50,7 +53,8 @@
             <!-- Course -->
             <CustomRouterLink to="/course/:courseId">
                 <div class="relative">
-                    <img class="mt-10" src="../assets/snijden.png" alt="">
+                    <img class="mt-10 md:hidden" src="../assets/snijden.png" alt="">
+                    <img class="hidden md:block" src="../assets/snijden-md.png" alt="">
                     <div class="absolute bottom-10 left-10">
                         <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
                             <p class="text-text text-gray">Edwin</p>
@@ -61,7 +65,7 @@
             </CustomRouterLink>
         </div>
 
-        <div class="bg-accent">
+        <div class="bg-accent md:text-left md:p-10 md:pl-40">
             <!-- CTA BUTTON -->
             <CustomRouterLink to="/course-overview">
                 <button class="mt-20 ml-5 mb-20 border border-primary text-LABEL text-primary px-6 py-2 rounded-md">

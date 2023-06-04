@@ -1,10 +1,10 @@
 <template>
     <header class="bg-white">
-        <div class="flex justify-between items-center py-4 px-6" v-if="!isMenuOpen">
+        <div class="flex justify-between items-center py-4 px-6 md:justify-around" v-if="!isMenuOpen">
             <div class="flex items-center">
                 <img class="h-8 w-auto" src="../assets/schildRGB.png" alt="Logo">
             </div>
-            <nav class="hidden md:flex space-x-10">
+            <nav class="hidden md:flex md:space-x-40">
                 <router-link to="/" class="">Home</router-link>
                 <router-link to="/course-overview">Cursussen</router-link>
             </nav>

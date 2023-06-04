@@ -1,5 +1,5 @@
 <template>
-    <h1>COURSE PAGE</h1>
+    <div></div>
 </template>
 
 <script>
