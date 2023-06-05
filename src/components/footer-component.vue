@@ -1,20 +1,20 @@
 <template>
     <div class="bg-primary">
         <div class="md:flex md:justify-around">
-            <div class="md:w-1/4 md:flex md:justify-between md:mr-20 md:mt-20">
-                <div class="sm:pt-20 md:pt-0 text-left">
-                    <h4 class="text-h4 text-white text-center md:inline-block md:text-left">Leger des Heils</h4>
-                    <h4 class="text-h4 text-white text-center md:block md:text-left">Enkeltje Zelfstandig</h4>
+            <div class="md:w-2/4 md:flex md:justify-between md:mr-20 lg:w-1/3 lg:mt-20">
+                <div class="pt-20 text-left lg:pt-0">
+                    <h4 class="text-h4 text-white text-center lg:inline-block lg:text-left">Leger des Heils</h4>
+                    <h4 class="text-h4 text-white text-center lg:block lg:text-left">Enkeltje Zelfstandig</h4>
                 </div>
-                <div class="text-center text-white">
-                    <p class="mt-10 md:mt-0 text-secondary text-LABEL">MENU</p>
+                <div class="text-center text-text_small text-white space-y-3">
+                    <p class="mt-10 lg:mt-0 text-secondary text-text">MENU</p>
                     <p class="mt-5">About</p>
                     <p>Services</p>
                     <p>Blog</p>
                     <p>Contact</p>
                 </div>
             </div>
-            <div class="flex justify-center items-center space-x-2 mt-10 md:inline-flex">
+            <div class="flex justify-center items-center space-x-2 mt-10 lg:inline-flex">
                 <div class="w-12 h-12 rounded-full bg-secondary flex justify-center items-center">
                     <i class="fab fa-facebook-f text-white text-lg"></i>
                 </div>
@@ -26,14 +26,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center my-10 md:my-0 md:mt-20 md:px-10">
-            <img class="md:hidden" src="../assets/Rectangle.png" alt="">
-            <img class="sm:hidden md:block md:px-40" src="../assets/Rectangle-md.png" alt="">
+        <div class="flex justify-center my-10 lg:my-0 lg:mt-20 lg:px-10">
+            <img class="lg:hidden" src="../assets/Rectangle.png" alt="">
+            <img class="sm:hidden lg:block lg:px-20" src="../assets/Rectangle-md.png" alt="">
 
         </div>
-        <div class="pb-10 text-center text-gray-400 md:flex md:ml-40 md:p-10">
+        <div class="pb-10 text-center text-gray-400 lg:flex lg:ml-20 lg:p-10">
             <p>Copyright &copy; 2023 Sam Baramesi.</p>
-            <p class="md:hidden">All rights reserved.</p>
+            <p class="lg:hidden">All rights reserved.</p>
         </div>
     </div>
 </template>

@@ -5,6 +5,7 @@ import * as VueRouter from 'vue-router'
 import HomePage from './pages/HomePage.vue'
 import CoursePage from './pages/CoursePage.vue'
 import CourseOverviewPage from './pages/CourseOverviewPage.vue'
+import LoginPage from './pages/LoginPage.vue'
 
 createApp(App)
     .use(VueRouter.createRouter({
@@ -22,7 +23,11 @@ createApp(App)
             {
                 path: '/course-overview',
                 component: CourseOverviewPage
-            }
+            },
+            {
+                path: '/login',
+                component: LoginPage
+            },
         ]
     }))
     .mount('#app')

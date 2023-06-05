@@ -7,6 +7,7 @@
             <nav class="hidden md:flex md:space-x-40">
                 <router-link to="/" class="">Home</router-link>
                 <router-link to="/course-overview">Cursussen</router-link>
+                <router-link to="/login">Login</router-link>
             </nav>
             <div class="md:hidden">
                 <button class="flex items-center" @click="isMenuOpen = !isMenuOpen">
@@ -22,6 +23,7 @@
                 <!-- Menu items -->
                 <router-link to="/" class="">Home</router-link>
                 <router-link to="/course-overview">Cursussen</router-link>
+                <router-link to="/login">Login</router-link>
             </nav>
             <div class="md:hidden">
                 <button class="" @click="isMenuOpen = !isMenuOpen">

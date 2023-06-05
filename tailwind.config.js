@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'sm': '375px',    // Small screens and above
-        'md': '412px',    // Medium screens and above
-        'lg': '768px',   // Large screens and above
-        'xl': '1024px',   // Extra-large screens and above
+        'sm': '360px',    // Small screens and above
+        'md': '768px',    // Medium screens and above
+        'lg': '1024px',   // Large screens and above
+        'xl': '1440px',   // Extra-large screens and above
       },
       fontWeight: {
         'normal': 400,
@@ -32,6 +32,7 @@ module.exports = {
         primary: '#072329',
         secondary: '#E8231A',
         accent: '#f4f2ef',
+        title: '#391400',
       },
     },
   },
