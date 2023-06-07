@@ -1,10 +1,21 @@
 data = {
 
-    courseName: "CourseName",
-    courseImage: "",
-    courseDetails: [
-        {
-            
-        }
-    ]
+    name: "Maaltijd salade",
+    imageName: "salad.png",
+    writtenBy: "Petra",
+    dateMade: "07-12-2022",
+    title1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    desc1: "Maecenas et malesuada mauris. Donec scelerisque a ante ac euismod. Phasellus at eros Leo. Suspendisse placerat,",
+    title2: "Titel met wat uitleg",
+    desc2: "Maecenas et malesuada mauris. Donec scelerisque a ante ac euismod. Phasellus at eros Leo",
+    ingredient1: "Ingredient nr 1",
+    ingredient2: "Ingredient 400gr",
+    ingredient3: "Ingredient 15 eetlepels",
+    desc3: "Maecenas et malesuada mauris. Donec scelerisque a ante ac euismod. Phasellus at eros Leo a mauris. Donec scelerisque a mauris. Donec scelerisqu Donec scelerisqu",
+    title3: "Nog een Titel met wat uitleg",
+    desc4: "Maecenas et malesuada mauris. Donec scelerisque a ante ac euismod. Phasellus at eros Leo",
+    step1: "Stap 1 snij ....",
+    step2: "Doe nu de ....",
+    step3: "Vul nu nog wat in,...",
+    desc5: "Maecenas et malesuada mauris. Donec scelerisque a ante ac euismod. Phasellus at eros Leo a mauris. Donec scelerisque a mauris. Donec scelerisqu Donec scelerisqu",
 }

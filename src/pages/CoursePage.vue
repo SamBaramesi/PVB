@@ -18,7 +18,6 @@
         </div>
 
         <img class="mt-5 w-full md:hidden" src="../assets/salad.png" alt="">
-        <img class="hidden mt-5 mx-auto md:block md:" src="../assets/salad-md.png" alt="">
 
         <div class="md:mx-40 lg:mx-60 xl:mx-80">
             <div class="flex flex-col items-left space-y-1 mt-5 md:flex-row md:justify-between">
@@ -86,9 +85,35 @@
 import FooterComponent from '@/components/footer-component.vue';
 import HeaderComponent from '@/components/header-component.vue';
 import { RouterLink } from 'vue-router';
+import axios from 'axios';
 
 export default {
     name: "CoursePage",
-    components: { HeaderComponent, FooterComponent, CustomRouterLink: RouterLink, }
+    data() {
+        return {
+            // product: products.find( product => productId === this.$route.params.productId)
+            course: {}
+        }
+    },
+    components: { HeaderComponent, FooterComponent, CustomRouterLink: RouterLink, },
+    created() {
+        // this.fetchCourse()
+    },
+    methods: {
+        fetchCourse() {
+            const courseId = this.$route.params.courseId;
+            console.log(courseId);
+            const url = `http://localhost:8000/fetch-course/:${courseId}`;
+
+            axios.get(url)
+                .then(response => {
+                    console.log(response.data);
+                    // this.course = response.data; // Update the courses data property with the fetched courses
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        },
+    }
 }
 </script>

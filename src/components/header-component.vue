@@ -7,7 +7,8 @@
             <nav class="hidden md:flex md:space-x-40">
                 <router-link to="/" class="">Home</router-link>
                 <router-link to="/course-overview">Cursussen</router-link>
-                <router-link to="/login">Login</router-link>
+                <router-link v-if="!token" to="/login">Login</router-link>
+                <router-link v-else to="/admin-page">Dashboard</router-link>
             </nav>
             <div class="md:hidden">
                 <button class="flex items-center" @click="isMenuOpen = !isMenuOpen">
@@ -36,13 +37,17 @@
 </template>
 
 <script>
+
 export default {
     name: 'Header-Component',
     data() {
         return {
-            isMenuOpen: false
+            isMenuOpen: false,
+            token: localStorage.getItem('token')
         };
+    },
+    methods: {
+        // ...
     }
-    // ...
 }
 </script>

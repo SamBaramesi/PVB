@@ -20,7 +20,6 @@
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
                 <img class="mt-10 md:hidden" src="../assets/snijden.png" alt="">
-                <img class="hidden md:block" src="../assets/snijden-md.png" alt="">
                 <div class="absolute bottom-10 left-10 lg:space-x-0 lg:left-5">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
                         <p class="text-text text-gray">Kees</p>
@@ -34,7 +33,6 @@
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
                 <img class="mt-10 md:hidden" src="../assets/wok.png" alt="">
-                <img class="hidden md:block" src="../assets/wokken-md.png" alt="">
                 <div class="absolute bottom-10 space-x-4">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Edwin</p>
@@ -47,8 +45,7 @@
         <!-- Course -->
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
-                <img class="mt-10 md:hidden" src="../assets/salade.png" alt="">
-                <img class="hidden md:block" src="../assets/salade-md.png" alt="">
+                <img class="mt-10 md:hidden" src="../assets/salad.png" alt="">
                 <div class="absolute bottom-10 space-x-4 lg:space-x-0">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Edwin</p>
@@ -60,8 +57,7 @@
 
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
-                <img class="mt-10 md:hidden" src="../assets/salade.png" alt="">
-                <img class="hidden md:block" src="../assets/salade-md.png" alt="">
+                <img class="mt-10 md:hidden" src="../assets/salad.png" alt="">
                 <div class="absolute bottom-10 space-x-4 lg:space-x-0">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Edwin</p>
@@ -75,7 +71,6 @@
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
                 <img class="mt-10 md:hidden" src="../assets/voorbereiding.png" alt="">
-                <img class="hidden md:block" src="../assets/salade-md.png" alt="">
                 <div class="absolute bottom-10 space-x-4 lg:space-x-0">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Petra</p>
@@ -89,7 +84,6 @@
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
                 <img class="mt-10 md:hidden" src="../assets/pannekoeken.png" alt="">
-                <img class="hidden md:block" src="../assets/salade-md.png" alt="">
                 <div class="absolute bottom-10 space-x-4 lg:space-x-0">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Kees</p>
@@ -103,7 +97,6 @@
         <CustomRouterLink to="/course/:courseId">
             <div class="relative">
                 <img class="mt-10 md:hidden" src="../assets/spaghetti.png" alt="">
-                <img class="hidden md:block" src="../assets/salade-md.png" alt="">
                 <div class="absolute bottom-10 space-x-1 lg:space-x-0">
                     <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full ml-5">
                         <p class="text-text text-gray">Edwin</p>

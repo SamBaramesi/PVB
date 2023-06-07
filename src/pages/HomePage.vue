@@ -3,7 +3,8 @@
     <headerComponent />
 
     <!-- SECTION ONE -->
-    <div class=" flex flex-col items-center mt-10 md:flex-row-reverse md:justify-between md:p-10 lg:flex-row-reverse lg:justify-between lg:p-10 lg:pl-40">
+    <div
+        class=" flex flex-col items-center mt-10 md:flex-row-reverse md:justify-between md:p-10 lg:flex-row-reverse lg:justify-between lg:p-10 lg:pl-40">
         <img class="lg:hidden" src="../assets/hero-sm.png" alt="">
         <img class="hidden lg:block lg:w-1/2 lg:h-auto" src="../assets/hero-md.png" alt="">
         <div class="text-left ml-5">
@@ -19,52 +20,26 @@
 
     <!-- SECTION TWO -->
     <div>
-        <h3 class="bg-accent text-h3 pt-10 mt-10 text-center md:text-left md:pl-14 lg:text-left lg:p-10 lg:pl-40">Laatste cursussen</h3>
-        <div class="bg-accent flex flex-col items-center md:flex-row md:space-x-4 md:px-2 md:pt-10 lg:flex-row lg:justify-around">
-
-            <!-- Course -->
-            <CustomRouterLink to="/course/:courseId">
-                <div class="relative">
-                    <img class="mt-10 lg:hidden" src="../assets/wok.png" alt="">
-                    <img class="hidden lg:block" src="../assets/wokken-md.png" alt="">
-                    <div class="absolute bottom-10 left-10">
-                        <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
-                            <p class="text-text text-gray">Kees</p>
+        <h3 class="bg-accent text-h3 pt-10 mt-10 text-center md:text-left md:pl-14 lg:text-left lg:p-10 lg:pl-40">Laatste
+            cursussen</h3>
+        <div
+            class="bg-accent flex flex-col items-center md:flex-row md:space-x-4 md:px-2 md:pt-10 lg:flex-row lg:justify-around">
+            <div v-for="course in courses" :key="course._id">
+                <!-- Course -->
+                <router-link :to="`/course/${course._id}`">
+                    <div class="relative">
+                        <img class="mt-10 w-[341px] h-[438px] md:w-[448px] md:h-[576px] object-cover"
+                            :src="`../assets/${course.imageName}`" alt="">
+                        <div class="absolute bottom-10 left-10">
+                            <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
+                                <p class="text-text text-gray">{{ course.writtenBy }}</p>
+                            </div>
+                            <h3 class="text-h3 text-white mt-5 md:text-h4 lg:text-h3">{{ course.name }}</h3>
                         </div>
-                        <h3 class="text-h3 text-white mt-5 md:text-h4 lg:text-h3">Leren wokken</h3>
                     </div>
-                </div>
-            </CustomRouterLink>
-
-            <!-- Course -->
-            <CustomRouterLink to="/course/:courseId">
-                <div class="relative">
-                    <img class="mt-10 lg:hidden" src="../assets/salade.png" alt="">
-                    <img class="hidden lg:block" src="../assets/salade-md.png" alt="">
-                    <div class="absolute bottom-10 left-10">
-                        <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
-                            <p class="text-text text-gray">Petra</p>
-                        </div>
-                        <h3 class="text-h3 text-white mt-5 md:text-h4 lg:text-h3">Maaltijd Salade</h3>
-                    </div>
-                </div>
-            </CustomRouterLink>
-
-            <!-- Course -->
-            <CustomRouterLink to="/course/:courseId">
-                <div class="relative">
-                    <img class="mt-10 lg:hidden" src="../assets/snijden.png" alt="">
-                    <img class="hidden lg:block" src="../assets/snijden-md.png" alt="">
-                    <div class="absolute bottom-10 left-10">
-                        <div class="flex items-center justify-center bg-white w-20 h-10 rounded-full">
-                            <p class="text-text text-gray">Edwin</p>
-                        </div>
-                        <h3 class="text-h3 text-white mt-5 md:text-h4 lg:text-h3">Leren snijden</h3>
-                    </div>
-                </div>
-            </CustomRouterLink>
+                </router-link>
+            </div>
         </div>
-
         <div class="bg-accent pl-5 md:pl-5 lg:text-left lg:p-10 lg:pl-40">
             <!-- CTA BUTTON -->
             <CustomRouterLink to="/course-overview">
@@ -83,10 +58,32 @@
 import headerComponent from '@/components/header-component.vue';
 import footerComponent from '@/components/footer-component.vue';
 import { RouterLink } from 'vue-router';
+import axios from 'axios'
 
 export default {
     name: 'HomePage',
     // ...
-    components: { headerComponent, footerComponent, CustomRouterLink: RouterLink, }
+    data() {
+        return {
+            courses: {}
+        }
+    },
+    components: { headerComponent, footerComponent, CustomRouterLink: RouterLink, },
+    created() {
+        this.fetchLatestCourses()
+    },
+    methods: {
+        fetchLatestCourses() {
+            axios.get('http://localhost:8000/latest-courses')
+                .then(response => {
+                    // Handle the response data
+                    this.courses = response.data;
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the process
+                    console.error('An error occurred:', error);
+                });
+        }
+    }
 }
 </script>
