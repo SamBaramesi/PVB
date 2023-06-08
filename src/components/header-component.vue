@@ -24,7 +24,8 @@
                 <!-- Menu items -->
                 <router-link to="/" class="">Home</router-link>
                 <router-link to="/course-overview">Cursussen</router-link>
-                <router-link to="/login">Login</router-link>
+                <router-link v-if="!token" to="/login">Login</router-link>
+                <router-link v-else to="/admin-page">Dashboard</router-link>
             </nav>
             <div class="md:hidden">
                 <button class="" @click="isMenuOpen = !isMenuOpen">

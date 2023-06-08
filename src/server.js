@@ -214,30 +214,6 @@ app.put('/save-course/:_id', async (req, res) => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-app.get('/bye', (req, res) => {
-    res.send('Hey Homie');
-})
-
-app.get('/', (req, res) => { })
-
-app.get('/course-overview', (req, res) => { })
-
-app.get('/course/_id', (req, res) => {
-
-})
-
 app.listen(8000, () => {
     console.log('Server is listening on port 8000')
 })

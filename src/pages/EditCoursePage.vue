@@ -4,8 +4,7 @@
         <form @submit.prevent="saveChanges" class="max-w-sm">
             <div class="mb-4">
                 <label for="courseName" class="block text-gray-700 text-sm font-bold mb-2">Course Name:</label>
-                <input id="courseName" type="text" v-model="editedCourse.name"
-                    class="px-4 py-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input class="px-4 py-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500" id="courseName" type="text" v-model="editedCourse.name">
             </div>
 
             <!-- Add other form fields for editing the course details -->
@@ -25,7 +24,7 @@
             <!-- Add other form fields for editing the course details -->
             <div class="mb-4">
                 <label for="dateMade" class="block text-gray-700 text-sm font-bold mb-2">dateMade:</label>
-                <input id="dateMade" type="text" v-model="editedCourse.dateMade"
+                <input id="dateMade" type="text"  v-model="editedCourse.dateMade"
                     class="px-4 py-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
@@ -126,7 +125,6 @@
                 <input id="desc5" type="text" v-model="editedCourse.desc5"
                     class="px-4 py-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
-
 
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Save Changes

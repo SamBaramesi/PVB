@@ -4,17 +4,17 @@
 
     <!-- SECTION ONE -->
     <div
-        class=" flex flex-col items-center mt-10 md:flex-row-reverse md:justify-between md:p-10 lg:flex-row-reverse lg:justify-between lg:p-10 lg:pl-40">
+        class="flex flex-col items-center mt-10 md:flex-row-reverse md:justify-between md:p-10 lg:flex-row-reverse lg:justify-between lg:p-10 lg:pl-40">
         <img class="lg:hidden" src="../assets/hero-sm.png" alt="">
         <img class="hidden lg:block lg:w-1/2 lg:h-auto" src="../assets/hero-md.png" alt="">
         <div class="text-left ml-5">
             <h1 class="text-h2 text-primary font-roboto mt-20">Jij wilt koken!<br class=" lg:block"> Wat nu?</h1>
             <p class="text-gray mt-5">Kijk nu bij onze cursussen en recepten!</p>
-            <CustomRouterLink to="/course-overview">
+            <router-link to="/course-overview">
                 <button class="mt-20 bg-secondary text-LABEL text-white p-4 rounded-md">
                     NAAR CURSUSSEN
                 </button>
-            </CustomRouterLink>
+            </router-link>
         </div>
     </div>
 
